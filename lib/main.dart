@@ -11,8 +11,10 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(final BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routeInformationParser: Modular.routeInformationParser,
+      routerDelegate: Modular.routerDelegate,
       title: 'Test',
-    ).modular(); //added by extension
+    ); //added by extension
   }
 }
